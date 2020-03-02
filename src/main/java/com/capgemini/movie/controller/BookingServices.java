@@ -1,11 +1,11 @@
-package com.project.services;
+package com.capgemini.movie.controller;
 
 import java.io.ObjectInputStream.GetField;
 import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import com.project.dto.Theatre;
+import com.capgemini.movie.model.Theatre;
 
 public class BookingServices {
 

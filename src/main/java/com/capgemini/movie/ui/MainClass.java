@@ -1,4 +1,4 @@
-package com.project.exe;
+package com.capgemini.movie.ui;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,11 +8,10 @@ import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import com.project.dto.Admin;
-import com.project.dto.Theatre;
-import com.project.services.*;
-import com.project.services.AdminServices;
-import com.project.services.Storage;
+
+import com.capgemini.movie.controller.*;
+import com.capgemini.movie.model.Admin;
+import com.capgemini.movie.model.Theatre;
 
 public class MainClass {
 		
@@ -56,7 +55,7 @@ public static void login()
 			System.out.println("--------------------------------");
 	   		System.out.println("          Movies List           ");
 	   		System.out.println("--------------------------------");
-			ads.viewMovies();
+			AdminServices.viewMovies();
 	     }
 		        
 		 else if(str.charAt(0)=='3') 

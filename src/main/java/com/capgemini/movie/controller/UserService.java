@@ -1,11 +1,11 @@
-package com.project.services;
+package com.capgemini.movie.controller;
 
 import java.io.*;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import com.project.dto.User;
-import com.project.exe.MovieController;
+import com.capgemini.movie.model.User;
+import com.capgemini.movie.ui.MovieController;
 
 public class UserService 
 {

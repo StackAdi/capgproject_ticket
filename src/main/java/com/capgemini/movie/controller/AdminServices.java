@@ -1,7 +1,7 @@
-package com.project.services;
+package com.capgemini.movie.controller;
 import java.util.*;
 
-import com.project.dto.Theatre;
+import com.capgemini.movie.model.Theatre;
 
 public class AdminServices {
 	

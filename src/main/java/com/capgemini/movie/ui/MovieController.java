@@ -1,4 +1,4 @@
-package com.project.exe;
+package com.capgemini.movie.ui;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import com.project.dto.Theatre;
-import com.project.services.AdminServices;
-import com.project.services.ForgetPassword;
-import com.project.services.Storage;
-import com.project.services.UserService;
+import com.capgemini.movie.controller.AdminServices;
+import com.capgemini.movie.controller.ForgetPassword;
+import com.capgemini.movie.controller.Storage;
+import com.capgemini.movie.controller.UserService;
+import com.capgemini.movie.model.Theatre;
 
 public class MovieController {
 

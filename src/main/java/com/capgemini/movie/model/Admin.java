@@ -1,4 +1,4 @@
-package com.project.dto;
+package com.capgemini.movie.model;
 
 public class Admin {
 		private String adminId ;

@@ -1,4 +1,4 @@
-package com.project.services;
+package com.capgemini.movie.controller;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
-import com.project.dto.Theatre;
+import com.capgemini.movie.model.Theatre;
 
 public class Storage  
 {

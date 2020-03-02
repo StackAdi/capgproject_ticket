@@ -1,4 +1,4 @@
-package com.project.dto;
+package com.capgemini.movie.model;
 
 import java.io.Serializable;
 import java.util.Arrays;
