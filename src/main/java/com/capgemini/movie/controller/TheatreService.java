@@ -11,7 +11,7 @@ import java.util.HashMap;
 
 import com.capgemini.movie.model.Theatre;
 
-public class Storage  
+public class TheatreService  
 {
 
 	static HashMap<Integer, Theatre> theatrehs = new HashMap<Integer,Theatre>();
@@ -41,7 +41,7 @@ public class Storage
 	
 	public static void setTheatrehs(HashMap<Integer, Theatre> theatrehs) 
 	{
-		Storage.theatrehs = theatrehs;
+		TheatreService.theatrehs = theatrehs;
 	}
 
 	static public void addTheatre(Theatre t) 
@@ -50,7 +50,7 @@ public class Storage
 		theatrehs.put(t.getTheaterId(), t);
 	}	
 		 
-	static public HashMap<Integer, Theatre> getTheatrehs() {
+	 public static HashMap<Integer, Theatre> getTheatrehs() {
 		return theatrehs;
 	}
 	

@@ -1,6 +1,7 @@
 package com.capgemini.movie.controller;
 
 import java.io.*;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -15,8 +16,10 @@ public class UserService
 	public void choice() throws ClassNotFoundException, IOException 
 	{
 		// TODO Auto-generated method stub
+		System.out.println("-----------------------------------");
 		System.out.println("1. For Existing user");
 		System.out.println("2. For New user");
+		System.out.println("-----------------------------------");
 		int choice = sc.nextInt();
 		switch(choice)
 		{

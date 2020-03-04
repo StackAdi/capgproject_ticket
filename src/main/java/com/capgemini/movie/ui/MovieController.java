@@ -1,6 +1,5 @@
 package com.capgemini.movie.ui;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -8,11 +7,10 @@ import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import com.capgemini.movie.controller.AdminServices;
 import com.capgemini.movie.controller.ForgetPassword;
-import com.capgemini.movie.controller.Storage;
+import com.capgemini.movie.controller.TheatreService;
 import com.capgemini.movie.controller.UserService;
-import com.capgemini.movie.model.Theatre;
+
 
 public class MovieController {
 
@@ -21,7 +19,7 @@ public class MovieController {
 		try 
 		  { 
 			 try {
-				Storage.extractFile();
+				TheatreService.extractFile();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -35,7 +33,7 @@ public class MovieController {
 		MC.movieMain();
 		
 //		  HashMap<Integer, Theatre> th=new HashMap<Integer, Theatre>();
-//		  File f = new File("C:\\CapGemini\\Project\\TickIt\\src\\main\\resources\\MovieData.txt") ;
+//		  File f = new File("C:\\CapGemini\\Project\\TickIt\\src\\main\\resources\\FileMovie.txt") ;
 //		  FileOutputStream fos = new FileOutputStream(f) ; ObjectOutputStream oos = new
 //		  ObjectOutputStream(fos) ; oos.writeObject(th); oos.close(); fos.close();
 //		 
@@ -65,9 +63,11 @@ public class MovieController {
 				MainClass.login();
 				break;
 			case 3:
-				//ForgetPassword.forgetPassword(sc);
+				new ForgetPassword().forgetPassword();
 			case 4:
 				System.exit(0);
+			default:
+				System.out.println("Wrong Input !!");
 		}
 	}
 		catch(InputMismatchException e)

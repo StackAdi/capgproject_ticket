@@ -1,6 +1,7 @@
 package com.capgemini.movie.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -12,14 +13,32 @@ public class Theatre implements Serializable
 		String theaterCity ; 
 		String managerName;
 		String managerContact ;
-		String[] movie = new String[4] ;
-
-		public String[] getMovie() {
-			return movie;
+		//String[] movie = new String[4] ;
+	    HashMap<Integer, Movie> hsmovie = new HashMap<>();
+	    
+	public Theatre(int theaterId, String theaterName, String theaterCity, String managerName, String managerContact,
+				HashMap<Integer, Movie> hsmovie) {
+			super();
+			this.theaterId = theaterId;
+			this.theaterName = theaterName;
+			this.theaterCity = theaterCity;
+			this.managerName = managerName;
+			this.managerContact = managerContact;
+			this.hsmovie = hsmovie;
 		}
-		public void setMovie(String[] m) {
-			movie = m;
+	public Theatre() {
+		// TODO Auto-generated constructor stub
+	}
+	public HashMap<Integer, Movie> getHsmovie() {
+			return hsmovie;
 		}
+		public void setHsmovie(HashMap<Integer, Movie> hsmovie) {
+			this.hsmovie = hsmovie;
+		}
+		/*
+	 * public String[] getMovie() { return movie; } public void setMovie(String[] m)
+	 * { movie = m; }
+	 */
 		public int getTheaterId() {
 			return theaterId;
 		}
@@ -53,14 +72,8 @@ public class Theatre implements Serializable
 		}
 		@Override
 		public String toString() {
-			return "Theatre [theaterId : " +theaterId + "\n" +" theaterName: " + theaterName +"\n" + " theaterCity: "  + theaterCity
-					+"\n" + "Manager Name=" + managerName +"\n" + " Manager Contact: " + managerContact + "\n" +"Movie: "
-					+ Arrays.toString(movie) + "]";
+			return "Theatre [theaterId=" + theaterId + ", theaterName=" + theaterName + ", theaterCity=" + theaterCity
+					+ ", managerName=" + managerName + ", managerContact=" + managerContact + ", hsmovie=" + hsmovie
+					+ "]";
 		}
-		
-		
-		
-		
-		
-
 }
